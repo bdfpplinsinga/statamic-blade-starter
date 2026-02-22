@@ -1,0 +1,9 @@
+{
+    "name": "burotoast/systamic-blade",
+    "extra": {
+        "statamic": {
+            "name": "Systamic Blade",
+            "description": "Starter kit for statamic using blade"
+        }
+    }
+}
