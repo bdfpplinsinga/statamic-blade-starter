@@ -1,0 +1,31 @@
+social_media:
+  -
+    id: OZQKApZLIm4kPXE4pTF-I
+    handle: info@burotoast.nl
+    prefix: 'mailto:'
+    type: email
+    enabled: true
+  -
+    id: PNWuOZQs59MaCbUjI_Q0I
+    handle: burotoast
+    prefix: 'https://www.facebook.com/'
+    type: facebook
+    enabled: true
+  -
+    id: GUX9JPCWnTqlnebsnR9kw
+    handle: burotoast
+    prefix: 'https://www.instagram.com/'
+    type: instagram
+    enabled: true
+  -
+    id: urm_kSsi53S7_VRgTA4v0
+    handle: burotoast
+    prefix: 'https://www.linkedin.com/'
+    type: linkedin
+    enabled: true
+  -
+    id: q22IN1Xqdop4RSwPmC_zE
+    handle: burotoast
+    prefix: 'https://www.vimeo.com/'
+    type: vimeo
+    enabled: true

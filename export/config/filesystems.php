@@ -70,6 +70,51 @@ return [
             'report' => false,
         ],
 
+        'images' => [
+            'driver' => 'local',
+            'root' => public_path('images'),
+            'url' => '/images',
+            'visibility' => 'public',
+            'throw' => false,
+            'report' => false,
+        ],
+
+        'favicons' => [
+            'driver' => 'local',
+            'root' => public_path('favicons'),
+            'url' => '/favicons',
+            'visibility' => 'public',
+            'throw' => false,
+            'report' => false,
+        ],
+
+        'files' => [
+            'driver' => 'local',
+            'root' => public_path('files'),
+            'url' => '/files',
+            'visibility' => 'public',
+            'throw' => false,
+            'report' => false,
+        ],
+
+        'page_builder' => [
+            'driver' => 'local',
+            'root' => public_path('page_builder'),
+            'url' => '/page_builder',
+            'visibility' => 'public',
+            'throw' => false,
+            'report' => false,
+        ],
+
+        'social_images' => [
+            'driver' => 'local',
+            'root' => public_path('social_images'),
+            'url' => '/social_images',
+            'visibility' => 'public',
+            'throw' => false,
+            'report' => false,
+        ],
+
     ],
 
     /*

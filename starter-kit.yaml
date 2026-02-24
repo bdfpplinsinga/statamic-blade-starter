@@ -8,4 +8,3 @@ export_paths:
   - public/build
   - package.json
   - vite.config.js
-  - app/View/Components/Layouts
