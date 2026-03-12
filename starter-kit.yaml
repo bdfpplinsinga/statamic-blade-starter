@@ -9,3 +9,5 @@ export_paths:
   - public/build
   - package.json
   - vite.config.js
+dependencies:
+  marcorieser/tailwind-merge-statamic: ^1.2
