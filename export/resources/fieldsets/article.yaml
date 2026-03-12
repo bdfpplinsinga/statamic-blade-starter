@@ -1,0 +1,72 @@
+title: Article
+fields:
+  -
+    handle: article
+    field:
+      buttons:
+        - h1
+        - h2
+        - h3
+        - bold
+        - italic
+        - unorderedlist
+        - orderedlist
+        - quote
+        - removeformat
+        - anchor
+      reading_time: true
+      allow_source: true
+      type: bard
+      localizable: true
+      display: Article
+      replicator_preview: false
+      validate:
+        - required
+      container: files
+      always_save: false
+      remove_empty_nodes: true
+      smart_typography: true
+      collapse: true
+      sets:
+        sets:
+          display: Sets
+          icon: folder-open
+          sets:
+            buttons:
+              display: Buttons
+              instructions: 'Add one or multiple buttons.'
+              icon: link
+              image: buttons.jpeg
+              fields:
+                -
+                  import: buttons
+            pull_quote:
+              display: 'Pull quote'
+              instructions: 'Add a pull quote with an optional author.'
+              icon: text-formatting-quotation
+              image: pull-quote.jpeg
+              fields:
+                -
+                  import: pull_quote
+            video:
+              display: Video
+              instructions: 'Add a YouTube or Vimeo video with an optional caption.'
+              icon: movie-video-clip
+              image: video.jpeg
+              fields:
+                -
+                  import: video
+            image:
+              display: Image
+              instructions: 'Add a single image with an optional caption.'
+              icon: hero-image-above-text
+              image: image.jpeg
+              fields:
+                -
+                  import: image
+            images:
+              display: Images
+              icon: media-image-picture-gallery
+              fields:
+                -
+                  import: images

@@ -1,0 +1,12 @@
+title: Images
+fields:
+  -
+    handle: image
+    field: common.images
+    config:
+      width: 50
+  -
+    handle: size
+    field: common.size
+    config:
+      width: 50

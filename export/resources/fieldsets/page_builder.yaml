@@ -1,0 +1,36 @@
+title: 'Page builder'
+fields:
+  -
+    handle: page_builder
+    field:
+      type: replicator
+      localizable: true
+      hide_display: true
+      collapse: true
+      listable: false
+      display: 'Page builder'
+      button_label: 'Add block'
+      sets:
+        heros:
+          display: Heros
+          sets:
+            hero:
+              display: Hero
+              image: heroes.png
+              fields: {  }
+            stats:
+              display: Stats
+              image: stats-sections.png
+              fields: {  }
+            testimonial:
+              display: Testimonial
+              fields: {  }
+            testimonials:
+              display: Testimonials
+              fields: {  }
+            logo_cloud:
+              display: 'Logo Cloud'
+              fields: {  }
+            media_text:
+              display: 'Media & Text'
+              fields: {  }
