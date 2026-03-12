@@ -1,0 +1,213 @@
+<div class="bg-white px-6 py-32 lg:px-8 ">
+    <div class="mx-auto max-w-3xl">
+        <x-typography.heading>
+            {{ title /}}
+        </x-typography.heading>
+        {{ article }}
+       
+            {{ if type == 'buttons' }}
+                <div class="my-8">
+                    {{buttons}}
+                        <x-buttons.button :url="url">
+                            {{ label /}}
+                        </x-buttons.button>
+                    {{/buttons}}
+                </div>
+            {{ elseif type == 'pull_quote' }}
+                <div class="my-8">
+                    <blockquote class=" text-5xl italic font-extrabold text-teal-600">
+                        {{ quote /}}
+                    </blockquote>
+                    {{ if author }}
+                        <p class="mt-2 text-sm text-teal-500">— {{ author /}}</p>
+                    {{ /if }}
+                </div>
+            {{ elseif type == 'video' }}
+                <div class="my-8">
+                    <x-media.video 
+                        :video_url="video_url" 
+                        :caption="caption"
+                        autoplay="true"
+                        loop="true"
+                        muted="true"
+                        controls="false"
+                    />
+                </div>
+            {{ elseif type == 'image' }}
+                <div class="my-8">
+                    <x-media.picture 
+                        :image="image" 
+                        class="rounded-lg" 
+                        :alt="title"
+                        sizes="(max-width: 768px) 100vw, 50vw"
+                        :cover="true"
+                        :lazy="true"
+                    />
+                </div>
+            {{ elseif type == 'images' }}
+                <div class="my-8 grid gap-6 sm:grid-cols-2">
+                    {{image}}
+                        <x-media.picture 
+                            :image="url" 
+                            class="rounded-lg" 
+                            :alt="title"
+                            sizes="(max-width: 768px) 100vw, 50vw"
+                            :cover="true"
+                            :lazy="true"
+                        />
+                    {{/image}}
+                </div>
+            {{ elseif type == 'text' }}
+                <x-typography.prose as="div" class="my-8">
+                    {{ text /}}
+                </x-typography.prose>
+            {{ /if }}
+    
+        {{ /article}}
+    </div>
+</div>  
+
+<div class="hidden">
+{{ article }}
+    {{ if type == 'buttons' }}
+        {{ buttons }}
+            {{ if type == 'button' }}
+                {{ label /}}
+                {{ link_type /}}
+                {{ entry }}
+                    {{ title /}}
+                {{ /entry }}
+                {{ url /}}
+                {{ email /}}
+                {{ tel /}}
+                {{ sms /}}
+                {{ asset }}
+                    {{ alt /}}
+                    {{ id /}}
+                    {{ title /}}
+                    {{ path /}}
+                    {{ filename /}}
+                    {{ basename /}}
+                    {{ extension /}}
+                    {{ is_asset /}}
+                    {{ is_audio /}}
+                    {{ is_previewable /}}
+                    {{ is_image /}}
+                    {{ is_svg /}}
+                    {{ is_video /}}
+                    {{ blueprint /}}
+                    {{ edit_url /}}
+                    {{ container /}}
+                    {{ folder /}}
+                    {{ url /}}
+                    {{ permalink /}}
+                    {{ api_url /}}
+
+                    {{# Available, if the asset exists: #}}
+                    {{ size /}}
+                    {{ size_bytes /}}
+                    {{ size_kilobytes /}}
+                    {{ size_megabytes /}}
+                    {{ size_gigabytes /}}
+                    {{ size_b /}}
+                    {{ size_kb /}}
+                    {{ size_mb /}}
+                    {{ size_gb /}}
+                    {{ last_modified /}}
+                    {{ last_modified_timestamp /}}
+                    {{ last_modified_instance /}}
+                    {{ focus /}}
+                    {{ has_focus /}}
+                    {{ focus_css /}}
+                    {{ height /}}
+                    {{ width /}}
+                    {{ orientation /}}
+                    {{ ratio /}}
+                    {{ mime_type /}}
+                    {{ duration /}}
+                    {{ duration_seconds /}}
+                    {{ duration_minutes /}}
+                    {{ duration_sec /}}
+                    {{ duration_min /}}
+                    {{ playtime /}}
+                {{ /asset }}
+                {{ button_type /}}
+                {{ target_blank /}}
+                {{ attr_title /}}
+                {{ attr_aria /}}
+            {{ /if }}
+        {{ /buttons }}
+    {{ elseif type == 'pull_quote' }}
+        {{ size /}}
+        {{ quote /}}
+        {{ author /}}
+    {{ elseif type == 'video' }}
+        {{ size /}}
+        {{ if video_url | is_embeddable }}
+            <!-- Embeddable video sources, like YouTube and Vimeo -->
+            <iframe src="{{ video_url | embed_url }}"></iframe>
+        {{ else }}
+            <!-- Other HTML5 video types -->
+            <video src="{{ video_url | embed_url }}"></video>
+        {{ /if }}
+        {{ caption /}}
+    {{ elseif type == 'image' }}
+        {{ image }}
+            {{ alt /}}
+            {{ exempt_from_alt /}}
+            {{ id /}}
+            {{ title /}}
+            {{ path /}}
+            {{ filename /}}
+            {{ basename /}}
+            {{ extension /}}
+            {{ is_asset /}}
+            {{ is_audio /}}
+            {{ is_previewable /}}
+            {{ is_image /}}
+            {{ is_svg /}}
+            {{ is_video /}}
+            {{ blueprint /}}
+            {{ edit_url /}}
+            {{ container /}}
+            {{ folder /}}
+            {{ url /}}
+            {{ permalink /}}
+            {{ api_url /}}
+
+            {{# Available, if the asset exists: #}}
+            {{ size /}}
+            {{ size_bytes /}}
+            {{ size_kilobytes /}}
+            {{ size_megabytes /}}
+            {{ size_gigabytes /}}
+            {{ size_b /}}
+            {{ size_kb /}}
+            {{ size_mb /}}
+            {{ size_gb /}}
+            {{ last_modified /}}
+            {{ last_modified_timestamp /}}
+            {{ last_modified_instance /}}
+            {{ focus /}}
+            {{ has_focus /}}
+            {{ focus_css /}}
+            {{ height /}}
+            {{ width /}}
+            {{ orientation /}}
+            {{ ratio /}}
+            {{ mime_type /}}
+            {{ duration /}}
+            {{ duration_seconds /}}
+            {{ duration_minutes /}}
+            {{ duration_sec /}}
+            {{ duration_min /}}
+            {{ playtime /}}
+        {{ /image }}
+        {{ size /}}
+        {{ caption /}}
+    {{ elseif type == 'text' }}
+        {{ text /}}
+    {{ /if }}
+{{ /article }}
+{{ slug /}}
+</div>

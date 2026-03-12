@@ -1,0 +1,48 @@
+title: Article
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+          -
+            handle: title
+            field:
+              type: text
+              required: true
+              validate:
+                - required
+          -
+            handle: excerpt
+            field:
+              type: markdown
+              display: Excerpt
+              localizable: true
+              buttons:
+                - bold
+                - italic
+          -
+            handle: author
+            field:
+              type: users
+              display: Author
+              default: current
+              localizable: true
+              max_items: 1
+      -
+        display: 'Article Body'
+        collapsible: true
+        fields:
+          -
+            import: article
+  sidebar:
+    display: Sidebar
+    sections:
+      -
+        fields:
+          -
+            handle: slug
+            field:
+              type: slug
+              localizable: true
+              validate: 'max:200'

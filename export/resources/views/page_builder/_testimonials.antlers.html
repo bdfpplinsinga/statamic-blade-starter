@@ -1,0 +1,21 @@
+<div class="bg-white py-24 sm:py-32 dark:bg-gray-900">
+  <div class="mx-auto max-w-7xl px-6 lg:px-8">
+    <div class="mx-auto max-w-2xl text-center">
+      <x-typography.heading as="h2" class="text-indigo-600 font-semibold text-base/7 md:text-base/7">Testimonials</x-typography.heading>
+      <x-typography.heading as="p" variant="h2" class="tracking-tight mt-2">
+        We have worked with thousands of amazing people
+      </x-typography.heading>
+    </div>
+    <div class="mx-auto mt-16 flow-root max-w-2xl sm:mt-20 lg:mx-0 lg:max-w-none">
+      <div class="-mt-8 sm:-mx-4 sm:columns-2 sm:text-[0] lg:columns-3">
+        {{ loop times="9" }}
+        <div class="pt-8 sm:inline-block sm:w-full sm:px-4">
+          <x-testimonial>
+            Laborum quis quam. Dolorum et ut quod quia. Voluptas numquam delectus nihil. Aut enim doloremque et ipsam.
+          </x-testimonial>
+        </div>
+        {{ /loop }}
+      </div>
+    </div>
+  </div>
+</div>

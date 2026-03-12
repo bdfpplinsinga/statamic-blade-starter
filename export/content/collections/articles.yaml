@@ -1,0 +1,15 @@
+title: Articles
+icon: collections
+template: articles/show
+layout: layout
+revisions: false
+route: 'articles/{slug}'
+sort_dir: asc
+date_behavior:
+  past: null
+  future: null
+preview_targets:
+  -
+    label: Entry
+    url: '{permalink}'
+    refresh: true
